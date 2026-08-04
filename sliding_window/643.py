@@ -1,0 +1,20 @@
+nums = list(map(int,input().split(",")))
+k = int(input())
+
+def max_avg_subarr(nums,k):
+    window_sum = 0
+    for i in range(k):
+        window_sum += nums[i]
+
+    max_sum = window_sum
+
+    for i in range(k,len(nums)):
+        window_sum = window_sum - nums[i-k] + nums[i]
+
+        if window_sum > max_sum:
+            max_sum = window_sum 
+    return float(max_sum/k)
+
+
+print(max_avg_subarr(nums,k))
+        
