@@ -6,6 +6,7 @@ k = int(input())
 s = input()
 
 def longestRepeatingCharacter(k,s):
+    
     left = 0
     freq = {}
     max_freq = 0
@@ -24,6 +25,7 @@ def longestRepeatingCharacter(k,s):
             left += 1
         max_length = max(max_length,i - left + 1)
     return max_length
+  
 
 print(longestRepeatingCharacter(k,s))
         
