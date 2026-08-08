@@ -24,4 +24,4 @@ def topFrequentElements(k,nums):
         
     return result
 
-print(topFrequentElements())
+print(topFrequentElements(k,nums))
